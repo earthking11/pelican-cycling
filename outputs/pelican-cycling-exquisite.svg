@@ -355,6 +355,45 @@
       <circle cx="1163" cy="843" r="5" fill="#f0ca7c"/>
     </g>
 
+    <!-- Far-side leg: behind the frame, chainring, and near-side rider -->
+    <g id="farLeg" stroke-linecap="round" stroke-linejoin="round" filter="url(#smallShadow)" opacity="0.9">
+      <path id="legAPath" d="M710 695L680 745L741.1 784.1" fill="none">
+        <animate attributeName="d" dur="1.6s" repeatCount="indefinite" calcMode="linear"
+          keyTimes="0;0.0833;0.1667;0.25;0.3333;0.4167;0.5;0.5833;0.6667;0.75;0.8333;0.9167;1"
+          values="M710 695L680 745L741.1 784.1;
+                  M710 695L700 735L773.4 765.5;
+                  M710 695L730 730L810.6 765.5;
+                  M710 695L755 740L842.9 784.1;
+                  M710 695L770 760L861.5 816.4;
+                  M710 695L775 780L861.5 853.6;
+                  M710 695L765 795L842.9 885.9;
+                  M710 695L740 800L810.6 904.5;
+                  M710 695L715 795L773.4 904.5;
+                  M710 695L690 785L741.1 885.9;
+                  M710 695L675 770L722.5 853.6;
+                  M710 695L670 755L722.5 816.4;
+                  M710 695L680 745L741.1 784.1"/>
+      </path>
+      <use href="#legAPath" fill="none" stroke="#6f372a" stroke-width="29"/>
+      <use href="#legAPath" fill="none" stroke="url(#leg)" stroke-width="20"/>
+
+      <!-- Far pedal and foot stay behind the bicycle transmission plane. -->
+      <g id="pedalA">
+        <path d="M-31 8H31" stroke="#202b2d" stroke-width="13"/>
+        <path d="M-25 5H25" stroke="#c9d0c7" stroke-width="3" opacity="0.55"/>
+        <animateTransform attributeName="transform" type="translate" dur="1.6s" repeatCount="indefinite" calcMode="linear"
+          keyTimes="0;0.0833;0.1667;0.25;0.3333;0.4167;0.5;0.5833;0.6667;0.75;0.8333;0.9167;1"
+          values="741.1 784.1;773.4 765.5;810.6 765.5;842.9 784.1;861.5 816.4;861.5 853.6;842.9 885.9;810.6 904.5;773.4 904.5;741.1 885.9;722.5 853.6;722.5 816.4;741.1 784.1"/>
+      </g>
+      <g id="footA">
+        <path d="M-11-10C4-16 22-12 36-3C28 10 8 18-16 17C-31 16-39 7-34-3C-30-10-23-12-11-10Z" fill="url(#leg)" stroke="#70382c" stroke-width="5"/>
+        <path d="M-18 2L15 7M-7-5L24 1" fill="none" stroke="#f6c875" stroke-width="3" opacity="0.62"/>
+        <animateTransform attributeName="transform" type="translate" dur="1.6s" repeatCount="indefinite" calcMode="linear"
+          keyTimes="0;0.0833;0.1667;0.25;0.3333;0.4167;0.5;0.5833;0.6667;0.75;0.8333;0.9167;1"
+          values="741.1 784.1;773.4 765.5;810.6 765.5;842.9 784.1;861.5 816.4;861.5 853.6;842.9 885.9;810.6 904.5;773.4 904.5;741.1 885.9;722.5 853.6;722.5 816.4;741.1 784.1"/>
+      </g>
+    </g>
+
     <!-- Bicycle frame, drivetrain, and hardware -->
     <g stroke-linecap="round" stroke-linejoin="round" filter="url(#smallShadow)">
       <g fill="none" stroke="url(#frame)" stroke-width="25">
@@ -536,33 +575,13 @@
       </g>
     </g>
 
-    <!-- Pelican legs in cycling pose -->
-    <g id="pelicanLegs" stroke-linecap="round" stroke-linejoin="round" filter="url(#smallShadow)">
+    <!-- Near-side leg: in front of the body, frame, crank, and far-side foot -->
+    <g id="nearLeg" stroke-linecap="round" stroke-linejoin="round" filter="url(#smallShadow)">
       <!--
         The feet follow a true crank circle. The knees use a twelve-sample
         two-link compensation curve, keeping each hip fixed and preventing
         the rubber-hose look of a simple limb rotation.
       -->
-      <path id="legAPath" d="M710 695L680 745L741.1 784.1" fill="none">
-        <animate attributeName="d" dur="1.6s" repeatCount="indefinite" calcMode="linear"
-          keyTimes="0;0.0833;0.1667;0.25;0.3333;0.4167;0.5;0.5833;0.6667;0.75;0.8333;0.9167;1"
-          values="M710 695L680 745L741.1 784.1;
-                  M710 695L700 735L773.4 765.5;
-                  M710 695L730 730L810.6 765.5;
-                  M710 695L755 740L842.9 784.1;
-                  M710 695L770 760L861.5 816.4;
-                  M710 695L775 780L861.5 853.6;
-                  M710 695L765 795L842.9 885.9;
-                  M710 695L740 800L810.6 904.5;
-                  M710 695L715 795L773.4 904.5;
-                  M710 695L690 785L741.1 885.9;
-                  M710 695L675 770L722.5 853.6;
-                  M710 695L670 755L722.5 816.4;
-                  M710 695L680 745L741.1 784.1"/>
-      </path>
-      <use href="#legAPath" fill="none" stroke="#6f372a" stroke-width="29"/>
-      <use href="#legAPath" fill="none" stroke="url(#leg)" stroke-width="20"/>
-
       <path id="legBPath" d="M785 695L830 790L842.9 885.9" fill="none">
         <animate attributeName="d" dur="1.6s" repeatCount="indefinite" calcMode="linear"
           keyTimes="0;0.0833;0.1667;0.25;0.3333;0.4167;0.5;0.5833;0.6667;0.75;0.8333;0.9167;1"
@@ -583,14 +602,7 @@
       <use href="#legBPath" fill="none" stroke="#6f372a" stroke-width="30"/>
       <use href="#legBPath" fill="none" stroke="url(#leg)" stroke-width="21"/>
 
-      <!-- Free-spinning pedal platforms stay level under the feet. -->
-      <g id="pedalA">
-        <path d="M-31 8H31" stroke="#202b2d" stroke-width="13"/>
-        <path d="M-25 5H25" stroke="#c9d0c7" stroke-width="3" opacity="0.55"/>
-        <animateTransform attributeName="transform" type="translate" dur="1.6s" repeatCount="indefinite" calcMode="linear"
-          keyTimes="0;0.0833;0.1667;0.25;0.3333;0.4167;0.5;0.5833;0.6667;0.75;0.8333;0.9167;1"
-          values="741.1 784.1;773.4 765.5;810.6 765.5;842.9 784.1;861.5 816.4;861.5 853.6;842.9 885.9;810.6 904.5;773.4 904.5;741.1 885.9;722.5 853.6;722.5 816.4;741.1 784.1"/>
-      </g>
+      <!-- The free-spinning near pedal platform stays level under the foot. -->
       <g id="pedalB">
         <path d="M-31 8H31" stroke="#202b2d" stroke-width="13"/>
         <path d="M-25 5H25" stroke="#c9d0c7" stroke-width="3" opacity="0.55"/>
@@ -599,14 +611,7 @@
           values="842.9 885.9;810.6 904.5;773.4 904.5;741.1 885.9;722.5 853.6;722.5 816.4;741.1 784.1;773.4 765.5;810.6 765.5;842.9 784.1;861.5 816.4;861.5 853.6;842.9 885.9"/>
       </g>
 
-      <!-- Webbed feet remain nearly level because the pedal bearings rotate freely. -->
-      <g id="footA">
-        <path d="M-11-10C4-16 22-12 36-3C28 10 8 18-16 17C-31 16-39 7-34-3C-30-10-23-12-11-10Z" fill="url(#leg)" stroke="#70382c" stroke-width="5"/>
-        <path d="M-18 2L15 7M-7-5L24 1" fill="none" stroke="#f6c875" stroke-width="3" opacity="0.62"/>
-        <animateTransform attributeName="transform" type="translate" dur="1.6s" repeatCount="indefinite" calcMode="linear"
-          keyTimes="0;0.0833;0.1667;0.25;0.3333;0.4167;0.5;0.5833;0.6667;0.75;0.8333;0.9167;1"
-          values="741.1 784.1;773.4 765.5;810.6 765.5;842.9 784.1;861.5 816.4;861.5 853.6;842.9 885.9;810.6 904.5;773.4 904.5;741.1 885.9;722.5 853.6;722.5 816.4;741.1 784.1"/>
-      </g>
+      <!-- The webbed near foot remains level because the pedal bearing rotates freely. -->
       <g id="footB">
         <path d="M-11-10C4-16 22-12 36-3C28 10 8 18-16 17C-31 16-39 7-34-3C-30-10-23-12-11-10Z" fill="url(#leg)" stroke="#70382c" stroke-width="5"/>
         <path d="M-18 2L15 7M-7-5L24 1" fill="none" stroke="#f6c875" stroke-width="3" opacity="0.62"/>
