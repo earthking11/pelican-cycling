@@ -27,6 +27,11 @@
       <stop offset="0.72" stop-color="#e2b45d"/>
       <stop offset="1" stop-color="#69371f"/>
     </linearGradient>
+    <linearGradient id="saddleLeather" x1="0.15" y1="0" x2="0.8" y2="1">
+      <stop offset="0" stop-color="#b87946"/>
+      <stop offset="0.46" stop-color="#75452f"/>
+      <stop offset="1" stop-color="#342628"/>
+    </linearGradient>
     <linearGradient id="metal" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0" stop-color="#38444a"/>
       <stop offset="0.22" stop-color="#d9e1da"/>
@@ -214,7 +219,8 @@
         to { stroke-dashoffset: -26; }
       }
       @keyframes road-travel {
-        to { stroke-dashoffset: -106; }
+        /* Positive offset moves the left-to-right road path toward screen-left. */
+        to { stroke-dashoffset: 106; }
       }
       @keyframes air-stream {
         0% { stroke-dashoffset: 0; opacity: 0.12; }
@@ -302,6 +308,44 @@
     <ellipse id="shadowWide" cx="818" cy="1070" rx="643" ry="62" fill="#06171d" opacity="0.48"/>
     <ellipse id="shadowCore" cx="818" cy="1058" rx="523" ry="35" fill="#081e25" opacity="0.62"/>
 
+    <!-- Far-side leg: behind the bicycle wheel plane -->
+    <g id="farLeg" stroke-linecap="round" stroke-linejoin="round" filter="url(#smallShadow)" opacity="0.82">
+      <path id="legAPath" d="M710 695L680 745L741.1 784.1" fill="none">
+        <animate attributeName="d" dur="1.6s" repeatCount="indefinite" calcMode="linear"
+          keyTimes="0;0.0833;0.1667;0.25;0.3333;0.4167;0.5;0.5833;0.6667;0.75;0.8333;0.9167;1"
+          values="M710 695L680 745L741.1 784.1;
+                  M710 695L700 735L773.4 765.5;
+                  M710 695L730 730L810.6 765.5;
+                  M710 695L755 740L842.9 784.1;
+                  M710 695L770 760L861.5 816.4;
+                  M710 695L775 780L861.5 853.6;
+                  M710 695L765 795L842.9 885.9;
+                  M710 695L740 800L810.6 904.5;
+                  M710 695L715 795L773.4 904.5;
+                  M710 695L690 785L741.1 885.9;
+                  M710 695L675 770L722.5 853.6;
+                  M710 695L670 755L722.5 816.4;
+                  M710 695L680 745L741.1 784.1"/>
+      </path>
+      <use href="#legAPath" fill="none" stroke="#6f372a" stroke-width="29"/>
+      <use href="#legAPath" fill="none" stroke="url(#leg)" stroke-width="20"/>
+
+      <g id="pedalA">
+        <path d="M-31 8H31" stroke="#202b2d" stroke-width="13"/>
+        <path d="M-25 5H25" stroke="#c9d0c7" stroke-width="3" opacity="0.55"/>
+        <animateTransform attributeName="transform" type="translate" dur="1.6s" repeatCount="indefinite" calcMode="linear"
+          keyTimes="0;0.0833;0.1667;0.25;0.3333;0.4167;0.5;0.5833;0.6667;0.75;0.8333;0.9167;1"
+          values="741.1 784.1;773.4 765.5;810.6 765.5;842.9 784.1;861.5 816.4;861.5 853.6;842.9 885.9;810.6 904.5;773.4 904.5;741.1 885.9;722.5 853.6;722.5 816.4;741.1 784.1"/>
+      </g>
+      <g id="footA">
+        <path d="M-11-10C4-16 22-12 36-3C28 10 8 18-16 17C-31 16-39 7-34-3C-30-10-23-12-11-10Z" fill="url(#leg)" stroke="#70382c" stroke-width="5"/>
+        <path d="M-18 2L15 7M-7-5L24 1" fill="none" stroke="#f6c875" stroke-width="3" opacity="0.62"/>
+        <animateTransform attributeName="transform" type="translate" dur="1.6s" repeatCount="indefinite" calcMode="linear"
+          keyTimes="0;0.0833;0.1667;0.25;0.3333;0.4167;0.5;0.5833;0.6667;0.75;0.8333;0.9167;1"
+          values="741.1 784.1;773.4 765.5;810.6 765.5;842.9 784.1;861.5 816.4;861.5 853.6;842.9 885.9;810.6 904.5;773.4 904.5;741.1 885.9;722.5 853.6;722.5 816.4;741.1 784.1"/>
+      </g>
+    </g>
+
     <!-- Bicycle wheels -->
     <g id="rearWheel" filter="url(#smallShadow)">
       <circle cx="440" cy="843" r="258" fill="none" stroke="#071015" stroke-width="26"/>
@@ -355,57 +399,33 @@
       <circle cx="1163" cy="843" r="5" fill="#f0ca7c"/>
     </g>
 
-    <!-- Far-side leg: behind the frame, chainring, and near-side rider -->
-    <g id="farLeg" stroke-linecap="round" stroke-linejoin="round" filter="url(#smallShadow)" opacity="0.9">
-      <path id="legAPath" d="M710 695L680 745L741.1 784.1" fill="none">
-        <animate attributeName="d" dur="1.6s" repeatCount="indefinite" calcMode="linear"
-          keyTimes="0;0.0833;0.1667;0.25;0.3333;0.4167;0.5;0.5833;0.6667;0.75;0.8333;0.9167;1"
-          values="M710 695L680 745L741.1 784.1;
-                  M710 695L700 735L773.4 765.5;
-                  M710 695L730 730L810.6 765.5;
-                  M710 695L755 740L842.9 784.1;
-                  M710 695L770 760L861.5 816.4;
-                  M710 695L775 780L861.5 853.6;
-                  M710 695L765 795L842.9 885.9;
-                  M710 695L740 800L810.6 904.5;
-                  M710 695L715 795L773.4 904.5;
-                  M710 695L690 785L741.1 885.9;
-                  M710 695L675 770L722.5 853.6;
-                  M710 695L670 755L722.5 816.4;
-                  M710 695L680 745L741.1 784.1"/>
-      </path>
-      <use href="#legAPath" fill="none" stroke="#6f372a" stroke-width="29"/>
-      <use href="#legAPath" fill="none" stroke="url(#leg)" stroke-width="20"/>
-
-      <!-- Far pedal and foot stay behind the bicycle transmission plane. -->
-      <g id="pedalA">
-        <path d="M-31 8H31" stroke="#202b2d" stroke-width="13"/>
-        <path d="M-25 5H25" stroke="#c9d0c7" stroke-width="3" opacity="0.55"/>
-        <animateTransform attributeName="transform" type="translate" dur="1.6s" repeatCount="indefinite" calcMode="linear"
-          keyTimes="0;0.0833;0.1667;0.25;0.3333;0.4167;0.5;0.5833;0.6667;0.75;0.8333;0.9167;1"
-          values="741.1 784.1;773.4 765.5;810.6 765.5;842.9 784.1;861.5 816.4;861.5 853.6;842.9 885.9;810.6 904.5;773.4 904.5;741.1 885.9;722.5 853.6;722.5 816.4;741.1 784.1"/>
-      </g>
-      <g id="footA">
-        <path d="M-11-10C4-16 22-12 36-3C28 10 8 18-16 17C-31 16-39 7-34-3C-30-10-23-12-11-10Z" fill="url(#leg)" stroke="#70382c" stroke-width="5"/>
-        <path d="M-18 2L15 7M-7-5L24 1" fill="none" stroke="#f6c875" stroke-width="3" opacity="0.62"/>
-        <animateTransform attributeName="transform" type="translate" dur="1.6s" repeatCount="indefinite" calcMode="linear"
-          keyTimes="0;0.0833;0.1667;0.25;0.3333;0.4167;0.5;0.5833;0.6667;0.75;0.8333;0.9167;1"
-          values="741.1 784.1;773.4 765.5;810.6 765.5;842.9 784.1;861.5 816.4;861.5 853.6;842.9 885.9;810.6 904.5;773.4 904.5;741.1 885.9;722.5 853.6;722.5 816.4;741.1 784.1"/>
-      </g>
+    <!-- Fenders share the exact wheel centers and sit 7 px outside the tires. -->
+    <g id="wheelFenders" fill="none" stroke-linecap="round">
+      <path d="M243.4 646.4A278 278 0 0 1 636.6 646.4" stroke="#142b30" stroke-width="15" opacity="0.58"/>
+      <path d="M966.4 646.4A278 278 0 0 1 1359.6 646.4" stroke="#142b30" stroke-width="15" opacity="0.58"/>
+      <path d="M243.4 646.4A278 278 0 0 1 636.6 646.4" stroke="#dfbd76" stroke-width="9"/>
+      <path d="M966.4 646.4A278 278 0 0 1 1359.6 646.4" stroke="#dfbd76" stroke-width="9"/>
+      <path d="M246.3 649.3A274 274 0 0 1 633.7 649.3" stroke="#ffe4ad" stroke-width="2.5" opacity="0.76"/>
+      <path d="M969.3 649.3A274 274 0 0 1 1356.7 649.3" stroke="#ffe4ad" stroke-width="2.5" opacity="0.76"/>
+      <circle cx="243.4" cy="646.4" r="5" fill="#dfbd76" stroke="#5e422b" stroke-width="2"/>
+      <circle cx="636.6" cy="646.4" r="5" fill="#dfbd76" stroke="#5e422b" stroke-width="2"/>
+      <circle cx="966.4" cy="646.4" r="5" fill="#dfbd76" stroke="#5e422b" stroke-width="2"/>
+      <circle cx="1359.6" cy="646.4" r="5" fill="#dfbd76" stroke="#5e422b" stroke-width="2"/>
     </g>
 
     <!-- Bicycle frame, drivetrain, and hardware -->
     <g stroke-linecap="round" stroke-linejoin="round" filter="url(#smallShadow)">
       <g fill="none" stroke="url(#frame)" stroke-width="25">
-        <path d="M440 843L674 604L792 835Z"/>
-        <path d="M674 604L1003 630L792 835Z"/>
+        <path d="M440 843L690 746L792 835Z"/>
+        <path d="M690 746L1003 630L792 835Z"/>
         <path d="M1003 630L1044 713"/>
       </g>
       <g fill="none" stroke="#ffe3a5" stroke-width="3.5" opacity="0.75">
-        <path d="M447 837L674 612L785 827"/>
-        <path d="M681 610L996 635L798 828"/>
+        <path d="M447 837L691 754L785 827"/>
+        <path d="M699 747L996 635L798 828"/>
         <path d="M1007 636l35 74"/>
       </g>
+      <circle cx="690" cy="746" r="10" fill="#f0c36c" stroke="#5f3b25" stroke-width="4"/>
       <path d="M1044 713L1163 843" fill="none" stroke="url(#metal)" stroke-width="20"/>
       <path d="M1038 713L1158 843" fill="none" stroke="#e9e4d6" stroke-width="3" opacity="0.7"/>
       <path d="M1003 630L1017 581L1080 550" fill="none" stroke="url(#metal)" stroke-width="15"/>
@@ -413,9 +433,14 @@
       <path d="M1075 549c19-8 37-6 45 4" fill="none" stroke="#eef1e5" stroke-width="3" opacity="0.66"/>
       <path d="M1116 566c52 36 75 78 85 126" fill="none" stroke="#111e22" stroke-width="3"/>
       <path d="M1007 585c35 10 54 34 67 76" fill="none" stroke="#18272c" stroke-width="3"/>
-      <path d="M657 601l24-48" fill="none" stroke="url(#metal)" stroke-width="13"/>
-      <path d="M624 551c35-17 82-13 107 5c-14 19-88 24-116 8Z" fill="#2b2925" stroke="#101719" stroke-width="5"/>
-      <path d="M632 554c26-8 61-8 85 1" fill="none" stroke="#b59c72" stroke-width="3" opacity="0.72"/>
+
+      <!-- Saddle is partially covered by the body, making the seated contact readable. -->
+      <path d="M690 750V724" fill="none" stroke="url(#metal)" stroke-width="13"/>
+      <path d="M606 708C646 690 708 693 770 711C756 736 671 752 604 728Z" fill="url(#saddleLeather)" stroke="#101719" stroke-width="6"/>
+      <path d="M619 713C658 701 711 702 755 713" fill="none" stroke="#e1b477" stroke-width="3" opacity="0.8"/>
+      <path d="M617 728C660 740 717 733 756 716" fill="none" stroke="#291b1c" stroke-width="4" opacity="0.82"/>
+      <circle cx="625" cy="727" r="4" fill="#e2b35f" stroke="#3e2a22" stroke-width="2"/>
+      <circle cx="746" cy="721" r="4" fill="#e2b35f" stroke="#3e2a22" stroke-width="2"/>
 
       <!-- chain, cogs, crank -->
       <path class="chain-run" d="M443 831L791 813M443 855L791 857" fill="none" stroke="#aebbb7" stroke-width="5" stroke-dasharray="7 6"/>
@@ -440,12 +465,11 @@
       <circle cx="486" cy="914" r="10" fill="#27383b" stroke="#b9c5bd" stroke-width="4"/>
 
       <!-- frame details -->
-      <path d="M700 627l82 145" fill="none" stroke="#57351f" stroke-width="3" opacity="0.72"/>
+      <path d="M706 754l78 69" fill="none" stroke="#57351f" stroke-width="3" opacity="0.72"/>
       <path d="M817 794l134-129" fill="none" stroke="#57351f" stroke-width="3" opacity="0.72"/>
-      <circle cx="674" cy="604" r="10" fill="#f0c36c" stroke="#5f3b25" stroke-width="4"/>
       <circle cx="1003" cy="630" r="10" fill="#f0c36c" stroke="#5f3b25" stroke-width="4"/>
-      <path d="M880 627c8 22 8 42 1 60" fill="none" stroke="#e3c47d" stroke-width="3"/>
-      <path d="M864 655h34" stroke="#e3c47d" stroke-width="3"/>
+      <path d="M870 667c8 22 8 42 1 60" fill="none" stroke="#e3c47d" stroke-width="3"/>
+      <path d="M854 695h34" stroke="#e3c47d" stroke-width="3"/>
       <path d="M604 675c-28 8-47 28-56 59" fill="none" stroke="#152428" stroke-width="4"/>
       <path d="M1054 721c26-13 47-14 69-4" fill="none" stroke="#152428" stroke-width="4"/>
     </g>
@@ -573,6 +597,10 @@
         <path d="M524 671q31-22 62-2"/><path d="M576 695q31-22 62-1"/>
         <path d="M741 695q31-24 63-6"/><path d="M797 675q27-22 52-8"/>
       </g>
+
+      <!-- A soft compression crease anchors the bird's weight to the saddle. -->
+      <path d="M622 704C659 720 715 725 760 708" fill="none" stroke="#173d48" stroke-width="7" opacity="0.34"/>
+      <path d="M632 701C667 712 712 716 748 706" fill="none" stroke="#eef1e8" stroke-width="2.5" opacity="0.38"/>
     </g>
 
     <!-- Near-side leg: in front of the body, frame, crank, and far-side foot -->
@@ -620,12 +648,6 @@
           values="842.9 885.9;810.6 904.5;773.4 904.5;741.1 885.9;722.5 853.6;722.5 816.4;741.1 784.1;773.4 765.5;810.6 765.5;842.9 784.1;861.5 816.4;861.5 853.6;842.9 885.9"/>
       </g>
     </g>
-
-    <!-- Front and rear fender accents -->
-    <path d="M953 663C1028 584 1143 568 1245 610" fill="none" stroke="#dfbd76" stroke-width="8" opacity="0.82"/>
-    <path d="M309 615C387 573 489 574 573 626" fill="none" stroke="#dfbd76" stroke-width="8" opacity="0.74"/>
-    <path d="M1239 607l21 19" stroke="#dfbd76" stroke-width="6" stroke-linecap="round"/>
-    <path d="M310 615l-21 19" stroke="#dfbd76" stroke-width="6" stroke-linecap="round"/>
 
     <!-- Speed dust and foreground flecks -->
     <g id="dustCloud">
