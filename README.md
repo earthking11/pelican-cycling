@@ -11,7 +11,7 @@
 ## 作品文件
 
 - `outputs/pelican-cycling-exquisite.svg`：1600×1200 自包含动画 SVG
-- `outputs/pelican-cycling-codex-gpt-5-2026-07-30.svg`：本次新增的 1600×900 自包含动画 SVG
+- `outputs/pelican-cycling-gpt-5.6-sol-2026-07-30.svg`：本次新增的 1600×900 自包含动画 SVG
 - `outputs/pelican-cycling-animated-preview.gif`：800×600 循环动画预览
 - `outputs/pelican-cycling-exquisite-preview.png`：1600×1200 静态预览
 
@@ -20,7 +20,7 @@
 | 文件 | 制作模型 | 备注 |
 |---|---|---|
 | `outputs/pelican-cycling-exquisite.svg` | OpenAI GPT-5.6-sol（Max） | 仓库原有版本，保持不覆盖 |
-| `outputs/pelican-cycling-codex-gpt-5-2026-07-30.svg` | OpenAI Codex · GPT-5 | 本次新增版本，模型与日期已写入文件名和 SVG metadata |
+| `outputs/pelican-cycling-gpt-5.6-sol-2026-07-30.svg` | OpenAI Codex · GPT-5.6-sol | 本次新增版本，模型与日期已写入文件名和 SVG metadata |
 
 ## 动画设计
 

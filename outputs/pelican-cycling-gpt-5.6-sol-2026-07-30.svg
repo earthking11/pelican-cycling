@@ -10,9 +10,9 @@
   <title id="title">鹈鹕骑自行车的循环动画</title>
   <desc id="desc">一只白色鹈鹕戴着红色领巾，在海岸公路上骑一辆青绿色复古自行车。车轮、链条、曲柄、双腿、蹼足、羽毛、领巾、云层、海面与道路全部连续运动，动画可点击左上角按钮或按空格键暂停和继续。</desc>
   <metadata>
-    <generator>OpenAI Codex · GPT-5</generator>
+    <generator>OpenAI Codex · GPT-5.6-sol</generator>
     <created>2026-07-30</created>
-    <versionLabel>codex-gpt-5-2026-07-30</versionLabel>
+    <versionLabel>codex-gpt-5.6-sol-2026-07-30</versionLabel>
   </metadata>
 
   <defs>
