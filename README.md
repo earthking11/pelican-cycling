@@ -4,11 +4,18 @@
 
 [打开三版本实时 SVG 展示页](./index.html)
 
-<p align="center">
-  <a href="./index.html"><img src="./previews/pelican-cycling-exquisite.gif" width="31%" alt="GPT-5.6-sol 原有版本动态预览"></a>
-  <a href="./index.html"><img src="./previews/pelican-cycling-gpt-5.6-sol.gif" width="31%" alt="GPT-5.6-sol Codex 版本动态预览"></a>
-  <a href="./index.html"><img src="./previews/pelican-cycling-qwen3.8-max.gif" width="31%" alt="Qwen3.8-Max 版本动态预览"></a>
-</p>
+<table align="center">
+  <tr>
+    <th>OpenAI GPT-5.6-sol（Max）</th>
+    <th>OpenAI Codex · GPT-5.6-sol</th>
+    <th>Qwen3.8-Max</th>
+  </tr>
+  <tr>
+    <td align="center"><a href="./outputs/pelican-cycling-exquisite.svg"><img src="./previews/pelican-cycling-exquisite.gif" width="260" alt="OpenAI GPT-5.6-sol Max 动态预览"></a><br><sub><code>pelican-cycling-exquisite.svg</code></sub></td>
+    <td align="center"><a href="./outputs/pelican-cycling-gpt-5.6-sol-2026-07-30.svg"><img src="./previews/pelican-cycling-gpt-5.6-sol.gif" width="260" alt="OpenAI Codex GPT-5.6-sol 动态预览"></a><br><sub><code>pelican-cycling-gpt-5.6-sol-2026-07-30.svg</code></sub></td>
+    <td align="center"><a href="./outputs/pelican-cycling-qwen3.8-max-2026-08-03.svg"><img src="./previews/pelican-cycling-qwen3.8-max.gif" width="260" alt="Qwen3.8-Max 动态预览"></a><br><sub><code>pelican-cycling-qwen3.8-max-2026-08-03.svg</code></sub></td>
+  </tr>
+</table>
 
 ## 作品文件
 
