@@ -7,12 +7,12 @@
 <table align="center">
   <tr>
     <th>OpenAI GPT-5.6-sol（Max）</th>
-    <th>OpenAI Codex · GPT-5.6-sol</th>
+    <th>OpenAI GPT-5.6-sol（Max）</th>
     <th>Qwen3.8-Max</th>
   </tr>
   <tr>
     <td align="center"><a href="./outputs/pelican-cycling-exquisite.svg"><img src="./previews/pelican-cycling-exquisite.gif" width="260" alt="OpenAI GPT-5.6-sol Max 动态预览"></a><br><sub><code>pelican-cycling-exquisite.svg</code></sub></td>
-    <td align="center"><a href="./outputs/pelican-cycling-gpt-5.6-sol-2026-07-30.svg"><img src="./previews/pelican-cycling-gpt-5.6-sol.gif" width="260" alt="OpenAI Codex GPT-5.6-sol 动态预览"></a><br><sub><code>pelican-cycling-gpt-5.6-sol-2026-07-30.svg</code></sub></td>
+    <td align="center"><a href="./outputs/pelican-cycling-gpt-5.6-sol-2026-07-30.svg"><img src="./previews/pelican-cycling-gpt-5.6-sol.gif" width="260" alt="OpenAI GPT-5.6-sol Max 动态预览"></a><br><sub><code>pelican-cycling-gpt-5.6-sol-2026-07-30.svg</code></sub></td>
     <td align="center"><a href="./outputs/pelican-cycling-qwen3.8-max-2026-08-03.svg"><img src="./previews/pelican-cycling-qwen3.8-max.gif" width="260" alt="Qwen3.8-Max 动态预览"></a><br><sub><code>pelican-cycling-qwen3.8-max-2026-08-03.svg</code></sub></td>
   </tr>
 </table>
@@ -34,7 +34,7 @@
 | 文件 | 制作模型 | 备注 |
 |---|---|---|
 | `outputs/pelican-cycling-exquisite.svg` | OpenAI GPT-5.6-sol（Max） | 仓库原有版本，保持不覆盖 |
-| `outputs/pelican-cycling-gpt-5.6-sol-2026-07-30.svg` | OpenAI Codex · GPT-5.6-sol | 本次新增版本，模型与日期已写入文件名和 SVG metadata |
+| `outputs/pelican-cycling-gpt-5.6-sol-2026-07-30.svg` | OpenAI GPT-5.6-sol（Max） | 本次新增版本，模型与日期已写入文件名和 SVG metadata |
 | `outputs/pelican-cycling-qwen3.8-max-2026-08-03.svg` | Qwen3.8-Max | 本次新增版本；完整提示词见 `prompts/qwen3.8-max.md` |
 
 ## 动画设计
