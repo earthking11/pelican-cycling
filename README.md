@@ -1,19 +1,26 @@
 # 鹈鹕骑自行车
 
-一只骑着复古公路自行车穿越海岸暮色的高细节动画鹈鹕。
+同一个创作命题，由不同 LLM 完成的可播放鹈鹕骑自行车 SVG 动画集合。每个版本独立保存，模型、日期和提示词都单独标注。
 
-本作品由 OpenAI GPT-5.6-sol 使用 Max 思考模式设计、绘制并完成动画编排。
+[打开三版本实时 SVG 展示页](./index.html)
 
 <p align="center">
-  <img src="./outputs/pelican-cycling-animated-preview.gif" width="800" alt="鹈鹕骑自行车动画预览">
+  <a href="./index.html"><img src="./previews/pelican-cycling-exquisite.gif" width="31%" alt="GPT-5.6-sol 原有版本动态预览"></a>
+  <a href="./index.html"><img src="./previews/pelican-cycling-gpt-5.6-sol.gif" width="31%" alt="GPT-5.6-sol Codex 版本动态预览"></a>
+  <a href="./index.html"><img src="./previews/pelican-cycling-qwen3.8-max.gif" width="31%" alt="Qwen3.8-Max 版本动态预览"></a>
 </p>
 
 ## 作品文件
 
 - `outputs/pelican-cycling-exquisite.svg`：1600×1200 自包含动画 SVG
 - `outputs/pelican-cycling-gpt-5.6-sol-2026-07-30.svg`：本次新增的 1600×900 自包含动画 SVG
+- `outputs/pelican-cycling-qwen3.8-max-2026-08-03.svg`：Qwen3.8-Max 生成的 900×600 自包含动画 SVG
+- `index.html`：三版本实时 SVG 展示页（适合 GitHub Pages 或本地静态服务器）
+- `prompts/qwen3.8-max.md`：Qwen3.8-Max 本次使用的完整提示词
 - `outputs/pelican-cycling-animated-preview.gif`：800×600 循环动画预览
 - `outputs/pelican-cycling-exquisite-preview.png`：1600×1200 静态预览
+
+动态预览位于 `previews/`：README 直接展示 GIF，`index.html` 则直接加载三个 SVG。
 
 ## 版本目录与模型标注
 
@@ -21,6 +28,7 @@
 |---|---|---|
 | `outputs/pelican-cycling-exquisite.svg` | OpenAI GPT-5.6-sol（Max） | 仓库原有版本，保持不覆盖 |
 | `outputs/pelican-cycling-gpt-5.6-sol-2026-07-30.svg` | OpenAI Codex · GPT-5.6-sol | 本次新增版本，模型与日期已写入文件名和 SVG metadata |
+| `outputs/pelican-cycling-qwen3.8-max-2026-08-03.svg` | Qwen3.8-Max | 本次新增版本；完整提示词见 `prompts/qwen3.8-max.md` |
 
 ## 动画设计
 
@@ -34,6 +42,6 @@
 
 ## 查看方式
 
-请使用 Chrome、Safari 或 Firefox 打开 SVG。部分系统文件预览工具只会显示 SVG 的静止首帧，此时可以直接查看 GIF 预览。
+请使用 Chrome、Safari 或 Firefox 打开 SVG，或打开 `index.html` 查看三个实时版本。部分系统文件预览工具只会显示 SVG 的静止首帧，此时可以直接查看 `previews/` 下的 GIF 预览。
 
 SVG 不依赖外部脚本、字体或位图资源，可以直接下载、嵌入网页或继续编辑。
