@@ -13,7 +13,7 @@
     h1 { margin:0; font:600 clamp(32px, 5vw, 68px)/.98 Georgia,serif; letter-spacing:-.045em; }
     .lead { max-width:480px; color:var(--muted); margin:0; }
     .eyebrow { color:var(--accent); text-transform:uppercase; letter-spacing:.18em; font-size:11px; margin-bottom:12px; }
-    .grid { display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:18px; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(270px, 1fr)); gap:18px; }
     .card { background:linear-gradient(155deg, rgba(38,65,70,.96), rgba(20,35,42,.96)); border:1px solid var(--line); border-radius:20px; overflow:hidden; box-shadow:0 18px 50px rgba(0,0,0,.24); }
     .stage { aspect-ratio:3/2; background:#d9eef1; display:grid; place-items:center; overflow:hidden; }
     .stage object, .stage img { width:100%; height:100%; display:block; border:0; object-fit:cover; }
@@ -34,7 +34,7 @@
       <p class="lead">同一个创作命题，由不同模型完成的可播放 SVG 版本。点击卡片下方链接查看原始 SVG；本页的画面区域会直接播放 SVG。</p>
     </header>
 
-    <section class="grid" aria-label="三个模型版本">
+    <section class="grid" aria-label="四个模型版本">
       <article class="card">
         <div class="stage"><object data="outputs/pelican-cycling-exquisite.svg" type="image/svg+xml"><img src="previews/pelican-cycling-exquisite.gif" alt="GPT-5.6-sol 原有版本动态预览"></object></div>
         <div class="body"><div class="model">OpenAI GPT-5.6-sol（Max）</div><h2>暮色公路版</h2><p class="meta">仓库原有版本 · 1600×1200 · 1.6 秒循环</p><div class="links"><a href="outputs/pelican-cycling-exquisite.svg">打开 SVG</a><a href="previews/pelican-cycling-exquisite.gif">GIF 预览</a></div></div>
@@ -48,6 +48,11 @@
       <article class="card">
         <div class="stage"><object data="outputs/pelican-cycling-qwen3.8-max-2026-08-03.svg" type="image/svg+xml"><img src="previews/pelican-cycling-qwen3.8-max.gif" alt="Qwen3.8-Max 版本动态预览"></object></div>
         <div class="body"><div class="model">Qwen3.8-Max</div><h2>明亮草地版</h2><p class="meta">2026-08-03 · 900×600 · 原始提示词已归档</p><div class="links"><a href="outputs/pelican-cycling-qwen3.8-max-2026-08-03.svg">打开 SVG</a><a href="prompts/qwen3.8-max.md">查看提示词</a></div></div>
+      </article>
+
+      <article class="card">
+        <div class="stage"><object data="outputs/pelican-cycling-qwen3.8-27b-8bit-2026-08-15.svg" type="image/svg+xml"><img src="previews/pelican-cycling-qwen3.8-27b-8bit.gif" alt="Qwen3.8-27B-8bit 版本动态预览"></object></div>
+        <div class="body"><div class="model">Qwen3.8-27B-8bit</div><h2>乡野巡游版</h2><p class="meta">2026-08-15 · 1200×700 · 四层视差滚动</p><div class="links"><a href="outputs/pelican-cycling-qwen3.8-27b-8bit-2026-08-15.svg">打开 SVG</a><a href="previews/pelican-cycling-qwen3.8-27b-8bit.gif">GIF 预览</a></div></div>
       </article>
     </section>
 
