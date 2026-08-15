@@ -43,7 +43,7 @@
 | `outputs/pelican-cycling-exquisite.svg` | OpenAI GPT-5.6-sol（Max） | 仓库原有版本，保持不覆盖 |
 | `outputs/pelican-cycling-gpt-5.6-sol-2026-07-30.svg` | OpenAI GPT-5.6-sol（Max） | 本次新增版本，模型与日期已写入文件名和 SVG metadata |
 | `outputs/pelican-cycling-qwen3.8-max-2026-08-03.svg` | Qwen3.8-Max | 本次新增版本；完整提示词见 `prompts/qwen3.8-max.md` |
-| `outputs/pelican-cycling-qwen3.8-27b-8bit-2026-08-15.svg` | Qwen3.8-27B-8bit | 本次新增版本；模型与日期已写入文件名和 SVG metadata |
+| `outputs/pelican-cycling-qwen3.8-27b-8bit-2026-08-15.svg` | Qwen3.8-27B-8bit 生成，OpenAI GPT-5.6-sol（Max）完善 | 完善版：修正脚部方向、车灯/铃铛支架、刹车线、颈部连接、眼睛遮挡、翼尖悬浮与喉囊轮廓；模型与日期已写入 SVG metadata |
 
 ## 动画设计
 
