@@ -2,7 +2,7 @@
 
 同一个创作命题，由不同 LLM 完成的可播放鹈鹕骑自行车 SVG 动画集合。每个版本独立保存，模型、日期和提示词都单独标注。
 
-[打开四版本实时 SVG 展示页](./index.html)
+[打开五版本实时 SVG 展示页](./index.html)
 
 <table align="center">
   <tr>
@@ -21,6 +21,12 @@
     <td align="center"><a href="./outputs/pelican-cycling-qwen3.8-max-2026-08-03.svg"><img src="./previews/pelican-cycling-qwen3.8-max.gif" width="260" alt="Qwen3.8-Max 动态预览"></a><br><sub><code>pelican-cycling-qwen3.8-max-2026-08-03.svg</code></sub></td>
     <td align="center"><a href="./outputs/pelican-cycling-qwen3.8-27b-8bit-2026-08-15.svg"><img src="./previews/pelican-cycling-qwen3.8-27b-8bit.gif" width="260" alt="Qwen3.8-27B-8bit 动态预览"></a><br><sub><code>pelican-cycling-qwen3.8-27b-8bit-2026-08-15.svg</code></sub></td>
   </tr>
+  <tr>
+    <th colspan="2">ZCode · GLM5.3</th>
+  </tr>
+  <tr>
+    <td colspan="2" align="center"><a href="./outputs/pelican-cycling-glm5.3-2026-08-16.svg"><img src="./previews/pelican-cycling-glm5.3.gif" width="300" alt="ZCode GLM5.3 动态预览"></a><br><sub><code>pelican-cycling-glm5.3-2026-08-16.svg</code></sub></td>
+  </tr>
 </table>
 
 ## 作品文件
@@ -29,12 +35,13 @@
 - `outputs/pelican-cycling-gpt-5.6-sol-2026-07-30.svg`：本次新增的 1600×900 自包含动画 SVG
 - `outputs/pelican-cycling-qwen3.8-max-2026-08-03.svg`：Qwen3.8-Max 生成的 900×600 自包含动画 SVG
 - `outputs/pelican-cycling-qwen3.8-27b-8bit-2026-08-15.svg`：Qwen3.8-27B-8bit 生成的 1200×700 自包含动画 SVG
-- `index.html`：四版本实时 SVG 展示页（适合 GitHub Pages 或本地静态服务器）
+- `outputs/pelican-cycling-glm5.3-2026-08-16.svg`：ZCode · GLM5.3 生成的 960×600 自包含动画 SVG
+- `index.html`：五版本实时 SVG 展示页（适合 GitHub Pages 或本地静态服务器）
 - `prompts/qwen3.8-max.md`：Qwen3.8-Max 本次使用的完整提示词
 - `outputs/pelican-cycling-animated-preview.gif`：800×600 循环动画预览
 - `outputs/pelican-cycling-exquisite-preview.png`：1600×1200 静态预览
 
-动态预览位于 `previews/`：README 直接展示 GIF，`index.html` 则直接加载四个 SVG。
+动态预览位于 `previews/`：README 直接展示 GIF，`index.html` 则直接加载五个 SVG。
 
 ## 版本目录与模型标注
 
@@ -44,6 +51,7 @@
 | `outputs/pelican-cycling-gpt-5.6-sol-2026-07-30.svg` | OpenAI GPT-5.6-sol（Max） | 本次新增版本，模型与日期已写入文件名和 SVG metadata |
 | `outputs/pelican-cycling-qwen3.8-max-2026-08-03.svg` | Qwen3.8-Max | 本次新增版本；完整提示词见 `prompts/qwen3.8-max.md` |
 | `outputs/pelican-cycling-qwen3.8-27b-8bit-2026-08-15.svg` | Qwen3.8-27B-8bit | 本次新增版本；模型与日期已写入文件名和 SVG metadata |
+| `outputs/pelican-cycling-glm5.3-2026-08-16.svg` | ZCode · GLM5.3 | 本次新增版本；模型与日期已写入文件名和 SVG metadata |
 
 ## 动画设计
 
@@ -57,6 +65,6 @@
 
 ## 查看方式
 
-请使用 Chrome、Safari 或 Firefox 打开 SVG，或打开 `index.html` 查看四个实时版本。部分系统文件预览工具只会显示 SVG 的静止首帧，此时可以直接查看 `previews/` 下的 GIF 预览。
+请使用 Chrome、Safari 或 Firefox 打开 SVG，或打开 `index.html` 查看五个实时版本。部分系统文件预览工具只会显示 SVG 的静止首帧，此时可以直接查看 `previews/` 下的 GIF 预览。
 
 SVG 不依赖外部脚本、字体或位图资源，可以直接下载、嵌入网页或继续编辑。
