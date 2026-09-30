@@ -2,7 +2,7 @@
 
 同一个创作命题，由不同 LLM 完成的可播放鹈鹕骑自行车 SVG 动画集合。每个版本独立保存，模型、日期和提示词都单独标注。
 
-[打开八版本实时 SVG 展示页](./index.html)
+[打开九版本实时 SVG 展示页](./index.html)
 
 <table align="center">
   <tr>
@@ -41,6 +41,12 @@
   <tr>
     <td colspan="2" align="center"><a href="./outputs/pelican-cycling-longcat-2.5-preview-2026-09-26.svg"><img src="./previews/pelican-cycling-longcat-2.5-preview.gif" width="300" alt="LongCat-2.5-Preview 动态预览"></a><br><sub><code>pelican-cycling-longcat-2.5-preview-2026-09-26.svg</code></sub></td>
   </tr>
+  <tr>
+    <th colspan="2">GPT-6.1-sol</th>
+  </tr>
+  <tr>
+    <td colspan="2" align="center"><a href="./outputs/pelican-cycling-gpt-6.1-sol-2026-09-30.svg"><img src="./previews/pelican-cycling-gpt-6.1-sol.gif" width="300" alt="GPT-6.1-sol 动态预览"></a><br><sub><code>pelican-cycling-gpt-6.1-sol-2026-09-30.svg</code></sub></td>
+  </tr>
 </table>
 
 ## 作品文件
@@ -53,12 +59,13 @@
 - `outputs/pelican-cycling-qwen3.8-flash-2026-08-29.svg`：ZCode · Qwen3.8-Flash 生成的 1200×760 自包含动画 SVG（96 帧 IK 求解，3.2 秒无缝循环）
 - `outputs/pelican-cycling-step-5-preview-2026-09-20.svg`：ZCode · step-5-preview 生成的 1280×720 自包含动画 SVG
 - `outputs/pelican-cycling-longcat-2.5-preview-2026-09-26.svg`：LongCat-2.5-Preview 生成的 1280×720 动态 SVG
-- `index.html`：八版本实时 SVG 展示页（适合 GitHub Pages 或本地静态服务器）
+- `outputs/pelican-cycling-gpt-6.1-sol-2026-09-30.svg`：GPT-6.1-sol 生成的 1600×1000 原生 SMIL 动画 SVG
+- `index.html`：九版本实时 SVG 展示页（适合 GitHub Pages 或本地静态服务器）
 - `prompts/qwen3.8-max.md`：Qwen3.8-Max 本次使用的完整提示词
 - `outputs/pelican-cycling-animated-preview.gif`：800×600 循环动画预览
 - `outputs/pelican-cycling-exquisite-preview.png`：1600×1200 静态预览
 
-动态预览位于 `previews/`：README 直接展示 GIF，`index.html` 则直接加载八个 SVG。
+动态预览位于 `previews/`：README 直接展示 GIF，`index.html` 则直接加载九个 SVG。
 
 ## 版本目录与模型标注
 
@@ -72,6 +79,7 @@
 | `outputs/pelican-cycling-qwen3.8-flash-2026-08-29.svg` | ZCode · Qwen3.8-Flash | 本次新增版本；由 qwen3.8-flash 制作，消耗 4300 万 token，用时 1 小时 45 分钟，API 金额消费 5 元；模型自我总结见下方「制作备注」与 SVG metadata |
 | `outputs/pelican-cycling-step-5-preview-2026-09-20.svg` | ZCode · step-5-preview | 本次新增版本；模型与日期已写入 SVG 描述和文件名 |
 | `outputs/pelican-cycling-longcat-2.5-preview-2026-09-26.svg` | LongCat-2.5-Preview | 本次新增版本；模型与日期已写入 SVG 描述和文件名 |
+| `outputs/pelican-cycling-gpt-6.1-sol-2026-09-30.svg` | GPT-6.1-sol | 本次新增版本；模型、日期和版本标识已写入 SVG metadata |
 
 ## 制作备注（Qwen3.8-Flash 版）
 
@@ -97,6 +105,6 @@
 
 ## 查看方式
 
-请使用 Chrome、Safari 或 Firefox 打开 SVG，或打开 `index.html` 查看八个实时版本。部分系统文件预览工具只会显示 SVG 的静止首帧，此时可以直接查看 `previews/` 下的 GIF 预览。
+请使用 Chrome、Safari 或 Firefox 打开 SVG，或打开 `index.html` 查看九个实时版本。部分系统文件预览工具只会显示 SVG 的静止首帧，此时可以直接查看 `previews/` 下的 GIF 预览。
 
 SVG 不依赖外部脚本、字体或位图资源，可以直接下载、嵌入网页或继续编辑。
